@@ -1,0 +1,15 @@
+<div class="row">
+{% for user in users %}
+    <div class="mb-4" style="width: 300px;">
+        <div class="card {% if loop.index is odd %}bg-dark text-white{% else %}bg-light{% endif %}">
+            <div class="card-body">
+                <h5 class="card-title">Utilisateur n°{{ user.id }}</h5>
+                <p class="card-text">Nom: {{ user.firstname }}</p>
+                <p class="card-text">Prénoms: {{ user.lastname }}</p>
+                <p class="card-text">Âge: {{ user.age }}</p>
+                <a href="#" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
